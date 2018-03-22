@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- These must come FIRST in the head. Everything else after-->  
+        <!-- Required Meta Tags -->
+        <meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="msapplication-tap-highlight" content="no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1,
+width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <!-- My Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="custom.css"/>
+
+	<title>
+	  PhoneGap
+        </title>
+    </head>
+    <body>
+      <div class="container">
+      <h1> Getting Started with PhoneGap </h1>
+      PhoneGap allows for users to create mobile apps using HTML, CSS, and Javascript. Apps created with PhoneGap target iOS, Android, and Windows all with a single codebase. This tutorial will go through the basics of using PhoneGap. <br><br>
+      <h3>Installation</h3>
+      Before installing the PhoneGap CLI, you need to have node.js and git. <br>
+      Then you can use a Command Line Interface and paste this command to download PhoneGap.<br>
+      <code> $ npm install -g phonegap@latest  </code> <br><br>
+
+      You can ensure that it's installed by typing <code> phonegap </code> into the command line. <br>
+
+      <code>
+	$ phonegap <br>
+	Usage: phonegap [options] [commands] <br>
+	Description:<br>
+	PhoneGap command-line tool.<br>
+	Commands:<br>
+	help [command]       output usage information<br>
+	create <path>        create a phonegap project<br>
+	  ...<br>
+      </code><br>
+      Download the free PhoneGap Developer app from iTunes, Google Play, or Windows Phone Store. Opening the app will show this screen: <br> <br>
+      <img src="home.png" alt="App Home Screen" style="width:30%;height=100%;">
+      <br> <br>
+
+      <h3> Create an App </h3>
+      Back in the terminal, create a new app by entering the following command:<br>
+      <code>
+	$ phonegap create myApp<br>
+	Creating a new cordova project.<br>
+      </code><br>
+
+      This should create a new project directory myApp/ containing the following: <br>
+      <samp>
+	config.xml    hooks    platforms    plugins    www
+      </samp><br>
+      
+      The content of your app will be within the www/ folder, the entry point being the index.html file.<br><br>
+
+      <h3> Preview the App </h3>
+      The PhoneGap CLI starts a small web server to host your project and returns the the server address. Start the web server by typing <code>phonegap serve</code> in the command line. <br>
+      <code>
+	$ phonegap serve <br>
+	[phonegap] starting app server...<br>
+	[phonegap] listening on 192.168.1.11:3000 <br>
+	[phonegap]<br>
+	[phonegap] ctrl-c to stop the server <br>
+	[phonegap] <br>
+      </code><br>
+      Now you can connect to 192.168.1.11:3000 on the mobile app to preview your app. <br> <br>
+      <img src="connect.png" alt="App Home Screen" style="width:30%;height=100%;">                    
+      <img src="connected.jpg" alt="App Home Screen" style="width:30%;height=100%;">
+      <img src="index1.jpg" alt="App Home Screen" style="width:30%;height=100%;"> <br><br>
+      Edits to index.html are automatically updated as the server is running.<br>
+      <img src="hello.gif" alt="App Home Screen" style="width:100%;height=100%;"> <br><br>
+
+      
+      </div>
+      
+      <script type="text/javascript" src="cordova.js"></script>
+      <script type="text/javascript" src="js/index.js"></script>
+      <script type="text/javascript">
+        app.initialize();
+      </script>
+    </body>
+</html>
